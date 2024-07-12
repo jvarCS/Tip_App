@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="brown">#7c4848</color>
+    <color name="grey">#364355</color>
+    <color name="burg">#900C3F</color>
+    <color name="teal">#1E8D9A</color>
+    <color name="appBackground">#E8DCC4</color>
+    <color name="badTip">#F51200</color>
+    <color name="goodTip">#01EA07</color>
+</resources>

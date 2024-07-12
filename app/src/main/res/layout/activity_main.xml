@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Views on left size -->
+    <TextView
+        android:id="@+id/tvBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/baseAmnt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />    <!-- Vertical Constraint on line 16-->
+
+    <TextView
+        android:id="@+id/tvTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tipSlidrPrcnt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvBase"
+        app:layout_constraintTop_toBottomOf="@+id/tvBase" />        <!-- Vertical Constraint on line 25. Vertical constraint says we want this component to be vertically alligned with -->
+    <!-- the component on top. In this case, Line 25 says tipPercent, this comp, should be alligned with bottom of comp above, tpBase-->
+    <!-- Vertical Constraint on line 34 -->
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tipAmnt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvBase"
+        app:layout_constraintTop_toBottomOf="@+id/etCustomSplit" />
+
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/totalAmnt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvBase"
+        app:layout_constraintTop_toBottomOf="@+id/tvTip" />
+
+    <!-- Views on right side -->
+    <EditText
+        android:id="@+id/etBaseAmount"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:ems="8"
+        android:hint="@string/baseBillAmnt"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBase"
+        app:layout_constraintStart_toEndOf="@+id/tvBase"
+        app:layout_constraintTop_toTopOf="@+id/tvBase" />
+
+    <SeekBar
+        android:id="@+id/etTipSlider"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercent"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercent" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tipAmntHint"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTip"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTip"
+        tools:text="Amount" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/totalAmntHint"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotalLabel"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalLabel"
+        tools:text="Amount" />
+
+    <TextView
+        android:id="@+id/tvTipDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etTipSlider"
+        app:layout_constraintStart_toStartOf="@+id/etTipSlider"
+        app:layout_constraintTop_toBottomOf="@+id/etTipSlider"
+        tools:text="Tip is NULL" />
+
+    <CheckBox
+        android:id="@+id/cbSplitChk"
+        android:layout_width="109dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/splitChk_ChkBox"
+        app:layout_constraintStart_toStartOf="@+id/tvBase"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercent" />
+
+    <Spinner
+        android:id="@+id/spChkSpinr"
+        android:layout_width="297dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/cbSplitChk"
+        app:layout_constraintTop_toBottomOf="@+id/cbSplitChk" />
+
+    <EditText
+        android:id="@+id/etCustomSplit"
+        android:layout_width="190dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/custom_split"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/spChkSpinr"
+        app:layout_constraintTop_toBottomOf="@+id/spChkSpinr" />
+
+    <!-- Vertical Constraint on line 43 -->
+</androidx.constraintlayout.widget.ConstraintLayout>

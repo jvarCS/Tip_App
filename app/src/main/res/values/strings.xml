@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tipper</string>
+    <string name="splitChk_ChkBox">Split Check</string>
+    <string name="baseAmnt">Base</string>
+    <string name="tipSlidrPrcnt">0%</string>
+    <string name="tipAmnt">Tip</string>
+    <string name="totalAmnt">Total</string>
+    <string name="baseBillAmnt">Bill Amount</string>
+    <string name="tipAmntHint">$0.00</string>
+    <string name="totalAmntHint">$0.00</string>
+    <string name="custom_split">Enter split amount</string>
+</resources>
