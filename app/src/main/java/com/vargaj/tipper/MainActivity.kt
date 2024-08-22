@@ -143,6 +143,7 @@ class MainActivity : AppCompatActivity() {  //Activities in android dev represen
         var splitAmnt = 1.0
         if (cbSplitChkVar.isChecked) {
             splitAmnt = if (spChkSpinrVar.selectedItem == "Custom") {
+                Log.i(TAG,"HELLOSAN")
                 etCustomSplitVar.text.toString().toDouble()
             } else spChkSpinrVar.selectedItem.toString().toDouble()
         }
