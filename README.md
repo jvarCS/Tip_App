@@ -18,4 +18,7 @@ Tapping the this checkbox will allow the user to choose from multiple pre-chosen
 Once the bill amount, tip percentage, and if checked, the number to split the bill by, are chosen, the calculated tip and total including the tip will be displayed for the user.
 
 ### Known bugs
-Currently if a user checks the split check, selects the "custom" option, and begins entering the bill amount before entering the custom split number, the app will crash. Probable cause of crash is the empty value of the custom option. Tip calculations begin once user starts entering base amount and there are no checks to ensure the custom option is not empty. Potential fix sees checks added to ensure non-empty custom option is not used in calculations.
+#1. Currently if a user checks the split check, selects the "custom" option, and begins entering the bill amount before entering the custom split number, the app will crash. Probable cause of crash is the empty value of the custom option. Tip calculations begin once user starts entering base amount and there are no checks to ensure the custom option is not empty. Potential fix sees checks added to ensure non-empty custom option is not used in calculations.
+
+### Fixed bugs
+#1. App no longer crashes
